@@ -27,3 +27,9 @@ Some general setup steps and useful links when moving to a new machine.
 ## Set up uv
 
 - Install uv: see https://docs.astral.sh/uv/getting-started/installation/
+
+## Set up Claude Code
+
+- Install Claude Code: see https://docs.claude.com/en/docs/claude-code/setup
+- Restore settings: see [`claude-settings/README.md`](claude-settings/README.md)
+- Run `claude` and authenticate (credentials are not stored in this repo)
