@@ -21,3 +21,7 @@ cp claude-settings/statusline-command.sh ~/.claude/statusline-command.sh
 Note: with copies, edits made via Claude Code only change the local file — to share them across machines, copy the updated file back into `claude-settings/` and commit. If you'd rather have edits flow through to the repo automatically, swap `cp` for `ln -s` and use absolute paths (e.g. `"$(pwd)/claude-settings/settings.json"`).
 
 Then run `claude` and authenticate.
+
+## Migrate project history
+
+To carry conversation history across machines, copy `~/.claude/projects/` from the old machine to the new one. Then ask Claude to migrate it — tell it where the copied folder is and where each project now lives on this machine. Claude will rename the per-project history directories to match the new absolute paths and rewrite the embedded `cwd` fields inside the JSONL files so `claude --resume` finds the old conversations.
